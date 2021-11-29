@@ -30,6 +30,39 @@ let holder = document.getElementById("id-of-div");
 let graph = new Graph(holder);
 graph.create();
 </pre>
+        <p>Now when the graph has been created, you can start inserting data to the graph. To add multiple instances of data, you can
+            set the data equal to an object, like this:
+        </p>
+<pre>
+graph.data = [
+    {
+        key: "10 Dec",
+        value: 12
+    },
+    {
+        key: "11 Dec",
+        value: 8
+    }
+];
+</pre>
+        <p>
+            This will add two data points to the graphs. If you want to add onto this data set, you can use the function
+            appendData(data) which takes a list of objects and adds it to the end of the data set
+        </p>
+<pre>
+let data = [
+    {
+        key: "12 Dec",
+        value: 13
+    }
+];
+
+graph.appendData(data);
+</pre>
+        <p>
+            It can also accept a single object of data. Notice that this will add the data att the end of the list, to add data
+            after or before a specific data point, use AddBefore(data, key) or AddAfter(data, key), wher the key is the data already in the data set.
+        </p>
     </section>
     <script src="graph.js"></script>
     <script src="test.js"></script>
