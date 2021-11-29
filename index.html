@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Graph Library</title>
+</head>
+<body>
+    <!-- container for the graph -->
+    <div id="holder">
+    </div>
+
+    <!-- explanation of how to use library -->
+    <section id="guide">
+        <h2>How to set up a graph</h2>
+        <p>You start by creating an empty div</p>
+<pre>
+&lt;div id="holder"&gt;
+&lt;/div&gt;
+</pre>
+        <p>Inside of this div, the graph will be implemented. While the id and class of
+            the div is not important, it's important that the div's width is at least 340px, otherwise it will not render
+        </p>
+        <p>Then in jaascript, create a new instance of a graph and set the dom of the div as the object to pass in</p>
+<pre>
+let holder = document.getElementById("id-of-div");
+
+let graph = new Graph(holder);
+graph.create();
+</pre>
+    </section>
+    <script src="graph.js"></script>
+    <script src="test.js"></script>
+</body>
+</html>
